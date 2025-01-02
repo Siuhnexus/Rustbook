@@ -1,0 +1,32 @@
+<main>
+ <h1 id="getting-started">
+  <a class="header" href="#" onclick={() => {
+    // @ts-ignore
+    window.externallink("#getting-started")
+}}>
+   Getting Started
+  </a>
+ </h1>
+ <p>
+  Let’s start your Rust journey! There’s a lot to learn, but every journey starts
+somewhere. In this chapter, we’ll discuss:
+ </p>
+ <ul>
+  <li>
+   Installing Rust on Linux, macOS, and Windows
+  </li>
+  <li>
+   Writing a program that prints
+   <code>
+    Hello, world!
+   </code>
+  </li>
+  <li>
+   Using
+   <code>
+    cargo
+   </code>
+   , Rust’s package manager and build system
+  </li>
+ </ul>
+</main>
