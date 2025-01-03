@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ChapterInfo from "./ChapterInfo.svelte";
+    import { progress } from "./info.svelte";
     import Progressbar from "./Progressbar.svelte";
 
     let interactive = $state(false);
@@ -16,6 +18,8 @@
 
 <h1>Aktueller Lesestand</h1>
 <p>Gesamtfortschritt:</p>
-<Progressbar value={100}></Progressbar>
-<p>Zuletzt gelesen:</p>
+<Progressbar value={progress.totalProgress * 100}></Progressbar>
+<p>Noch nicht vervollständigt:</p>
+<ChapterInfo recommendation={progress.firstNonfinished}></ChapterInfo>
 <p>Nächste Leseempfehlung:</p>
+<ChapterInfo recommendation={progress.nextRecommendation}></ChapterInfo>
